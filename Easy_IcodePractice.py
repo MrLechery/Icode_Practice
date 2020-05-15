@@ -16,7 +16,7 @@ def problem3 (word) :
     z = word[::-1]
     print("true") if z == word else print("False")
 
-def Problem4 (x) :
+def problem4 (x) :
     count = []
     maximum = 0
     for i in x.upper() :
@@ -48,3 +48,33 @@ def Problem4 (x) :
 
     print(count)
     print(maximum)
+    
+def problem7 (x):
+    num = []
+    sum = 0
+    tar = False
+
+    num = list(map(int, str(x)))
+    for i in num :
+        sum += i
+    num = list(map(int,str(sum)))
+    sum = 0
+    for i in num :
+        sum += i
+    if sum == 4 :
+         print(9-sum,end="")
+         print(x)
+    else :
+        print(x)
+ 
+def problem8 (x1,x2) #NotFinish :
+    sum = 0
+    for i in range (x1,x2+1) :
+        if 100 // i == 0 :
+            sum += 365
+        elif 400 // i == 0 :
+            sum += 366
+        else :
+            sum += 365
+        print(sum)
+        
