@@ -1,3 +1,11 @@
+def problem1(x1,x2) :
+    time = []
+    for i in x1.split(":") :
+        time.append(int(i))
+    for i in x2.split(":") :
+        time.append(int(i))
+    print(time[2]-time[0])
+    
 def problem2 (word_list) : #Clear
     new_word = word_list.split() #แยกออกจากกัน
 
@@ -22,5 +30,21 @@ def Problem4 (x) :
         if type(i) == int :
             if (i) > maximum :
                 maximum = i
+              
+ def problem6(x1,x2) :
+    time = []
+    for i in x1.split(":"):
+        time.append(int(i))
+    for i in x2.split(":"):
+        time.append(int(i))
+    time[1] += time[3]
+    time[3] -= time[3]
+    time[0] += time[2]
+    time[2] -= time[2]
+    if time[1] >= 60 :
+        time[1] -= 60
+        time[0] += 1
+    print(str(time[0]).zfill(2),":",str(time[1]).zfill(2))
+
     print(count)
     print(maximum)
