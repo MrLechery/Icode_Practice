@@ -8,6 +8,28 @@ def ProblemB (x) :
         sum += i
     print(sum)
 
+def problemC (x):
+    space = x-2
+    count = 0
+    while x > 0:
+
+        # print("@"*count,end="")
+        print(x,end="")
+        for j in range (space,0,-1) :
+            if space != -4 and space != -2 and space != -1:
+                print(" ",end="")
+
+
+        count = count + 1
+        space = space - 2
+        if space < -4 :
+            for k in range (space+4,0,+1) :
+                print(" ", end="")
+                # print(k,space2,end="")
+
+        print(x, space)
+        x -= 1    
+        
 def ProblemD (x) :
     z = 1
     for i in range(x-1,-1,-1) :
@@ -21,23 +43,6 @@ def ProblemD (x) :
         print(" "*i,end="")
         print("#"*z,end="")
         print("")
-
-def Problem4 (x) :
-    count = []
-    maximum = 0
-    for i in x.upper() :
-        if i not in count :
-            count.append(i)
-            count.append(1)
-        if i in count :
-            k = count.index(i)
-            count[k+1] = count[k+1]+1
-    for i in count :
-        if type(i) == int :
-            if (i) > maximum :
-                maximum = i
-    print(count)
-    print(maximum)     
 
 
             
