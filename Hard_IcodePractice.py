@@ -1,8 +1,8 @@
-def ProblemA (x) :
+def problemA (x) :
     z = x.split(" ")
     print (int(z[0])+int(z[1]))
 
-def ProblemB (x) :
+def problemB (x) :
     sum = 0
     for i in range (1,x+1,+2) :
         sum += i
@@ -30,7 +30,7 @@ def problemC (x):
         print(x, space)
         x -= 1    
         
-def ProblemD (x) :
+def problemD (x) :
     z = 1
     for i in range(x-1,-1,-1) :
         print(" "*i,end="")
@@ -43,6 +43,18 @@ def ProblemD (x) :
         print(" "*i,end="")
         print("#"*z,end="")
         print("")
+        
+def ProblemH (x) :
+    z = x.split()
+    sum = 0
+    for i in z[0] :
+        if i == "[" or i == "(": 
+            sum = sum + 1
+        else :
+            sum = sum - 1
+    if sum == 0 :
+        print("Yes")
+    else : print("No")
 
 
             
