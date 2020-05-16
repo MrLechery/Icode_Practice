@@ -77,4 +77,36 @@ def problem8 (x1,x2) #NotFinish :
         else :
             sum += 365
         print(sum)
+   
+def problem9 (x) :
+    calender = [7, 31 ,8 , 31 , 9 , 30 , 10 , 31 , 11 ,30]
+    z = x.split("-")
+    nowday = int(z[0]) #3
+    nowmonth = int(z[1]) #8
+    day = 27
+    month = 7
+    i = 0
+    sum = 0
+    ep = 0
+    epsum = 633
+    
+    while nowmonth > month or nowday > day:
+        if day == calender[i+1] :
+            month += 1
+            day = 0
+            
+        sum += 1
+        
+        if sum == 7 :
+            sum = 0
+            epsum += 1
+            ep += 1
+            
+        if ep // 5 == 1 :
+            epsum -= 1
+            
+        day += 1
+        
+    print(epsum)
+    
         
