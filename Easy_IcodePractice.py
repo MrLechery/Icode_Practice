@@ -109,4 +109,18 @@ def problem9 (x) :
         
     print(epsum)
     
+def problem10 (x):
+    print(x//35 + x//5)
+
+def problem11 (x):
+    num = [1,2,3,5,7,11,13]
+    for i in range (14,x+1) :
+        if i % 2 != 0 \
+                and i % 3 != 0 \
+                and i % 5 != 0 \
+                and i % 7 != 0 \
+                and i % 11 != 0 :
+            num.append(i)
+    print(len(num))
+    
         
