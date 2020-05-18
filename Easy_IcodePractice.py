@@ -123,4 +123,19 @@ def problem11 (x):
             num.append(i)
     print(len(num))
     
+def problem12 (*x):
+    boo = "No"
+    max = x[0]
+    for i in x :
+        if i < max :
+            boo = "Yes"
+        max = i
+    print(boo)
+
+def problem13 (x):
+    import datetime
+    y = x.split("-")
+    z = datetime.datetime(2020,int(y[1]),int(y[0]))
+    print(z.strftime("%A"))
+    
         
